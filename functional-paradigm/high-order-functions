@@ -45,7 +45,7 @@ x => x * x // squares
   The Tail-recursive version of the sum function
 */
 def sum(f: Int => Int, a: Int, b: Int): Int {
-  def loop(a, acc) {
+  def loop(a: Int, acc: Int) {
     if (a > b) acc
     else loop(a + 1, acc + f(a))
   }
