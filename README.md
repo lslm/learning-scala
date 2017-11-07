@@ -1,6 +1,6 @@
-## Learning Scala
+## Learning Scala |
 
-This repository contains a series of tutorials and exercices, covering the syntax of Scala programming language.
+This repository contains a series of tutorials and exercises, covering the syntax of Scala programming language.
 
 I'm also trying to cover all the fundamentals of functional paradigm.
 
