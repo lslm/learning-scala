@@ -1,4 +1,4 @@
-## Learning Scala |
+## Learning Functional Programming with Scala
 
 This repository contains a series of tutorials and exercises, covering the syntax of Scala programming language.
 
