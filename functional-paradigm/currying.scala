@@ -1,7 +1,6 @@
 /*
   Currying
 */
-
 // definition of a function the returns the cube of a
 def cubes(a: Int): Int =
   a * a * a
@@ -23,7 +22,6 @@ def sum(f: Int => Int, a: Int, b: Int): Int {
 def sumSquare = sum(x => x * x, 1, 5)
 def sumCubes = sum(cubes, 3, 9)
 def sumFacts = sum(fact, 3, 7)
-
 
 // Currying the sum function
 def sum(f: Int => Int)(Int, Int) => Int = {
