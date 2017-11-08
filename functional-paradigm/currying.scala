@@ -35,7 +35,7 @@ def sum(f: Int => Int)(Int, Int) => Int = {
 }
 
 /*
- The sum functionis now a function that returns another function.
+ The sum function is now a function that returns another function.
  The returned function sumF applies the given function parameter
  and sums the results.
  We can then define
