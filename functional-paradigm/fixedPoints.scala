@@ -9,7 +9,7 @@ x => 1 + x/2
 
 /*
   For some functions we can find the fixed point by starting with
-  an initial estimate and the by applying the f in a repetivie way
+  an initial estimate and the by applying the f in a repetive way
 
   x, f(x), f(f(x)), f(f(f(x))),...
 
@@ -53,7 +53,7 @@ fixedPoint(x => 1 + x/2)(2) // 2
 def sqrt(x: Double) = fixedPoint(y => x / y)(1.0) // does not work...
 
 /*
-  The function above does not work because it enters into a infinity loop
+  The function above does not work because it enters into a infinite loop
   One way to eliminate the ocilation is to prevent the estimation
   from varying too much. This can be done by averaging successive values
   of the original sequence
