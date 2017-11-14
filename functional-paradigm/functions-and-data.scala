@@ -7,6 +7,8 @@ object week2 {
 
   x.sub(y).sub(z)
   y.add(y)
+  x.less(y)
+  z.max(y)
 
   class Rational(x: Int, y: Int) {
     // gretest common divisor
@@ -44,6 +46,14 @@ object week2 {
         numer * other.denom,
         denom * other.numer
       )
+    }
+
+    def less(than: Rational) = {
+      numer * than.denom < than.numer * denom
+    }
+
+    def max(that: Rational) = {
+      if (this.less(that)) that else this
     }
 
     def equals(other: Rational) = {
