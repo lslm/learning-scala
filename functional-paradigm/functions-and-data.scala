@@ -11,14 +11,16 @@ object week2 {
   z.max(y)
 
   class Rational(x: Int, y: Int) {
+    require(y != 0, "Denominator must be nonzero")
+
     // gretest common divisor
     private def gcd(a: Int, b: Int): Int = {
       if (b == 0) a
       else gcd(b, a % b)
     }
     
-    def numer = x / gcd(x, y)
-    def denom = y / gcd(x, y)
+    val numer = x / gcd(x, y)
+    val denom = y / gcd(x, y)
 
     def add(other: Rational) = {
       new Rational(
