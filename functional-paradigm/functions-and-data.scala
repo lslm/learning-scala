@@ -9,8 +9,14 @@ object week2 {
   y.add(y)
 
   class Rational(x: Int, y: Int) {
-    def numer = x
-    def denom = y
+    // gretest common divisor
+    private def gcd(a: Int, b: Int): Int = {
+      if (b == 0) a
+      else gcd(b, a % b)
+    }
+    
+    def numer = x / gcd(x, y)
+    def denom = y / gcd(x, y)
 
     def add(other: Rational) = {
       new Rational(
