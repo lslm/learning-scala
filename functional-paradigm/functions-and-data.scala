@@ -5,6 +5,8 @@ object week2 {
   val y = new Rational(5, 7)
   val z = new Rational(3, 2)
 
+  val t = new Rational(5) // 5 / 1
+
   x.sub(y).sub(z)
   y.add(y)
   x.less(y)
@@ -14,6 +16,11 @@ object week2 {
     // this is a predifined function that takes
     // a condition and a optional message
     require(y != 0, "Denominator must be nonzero")
+
+    // secondary constructor
+    // it created a new rational with 1
+    // as default denominator
+    def this(x: Int) = this(x, 1)
 
     // gretest common divisor
     private def gcd(a: Int, b: Int): Int = {
