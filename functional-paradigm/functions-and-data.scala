@@ -11,6 +11,8 @@ object week2 {
   z.max(y)
 
   class Rational(x: Int, y: Int) {
+    // this is a predifined function that takes
+    // a condition and a optional message
     require(y != 0, "Denominator must be nonzero")
 
     // gretest common divisor
