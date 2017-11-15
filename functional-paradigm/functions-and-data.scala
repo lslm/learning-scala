@@ -1,16 +1,14 @@
-// Playing with classes
+// Playing with Scala classes
 
 object week2 {
-  val x = new Rational(1, 3)
-  val y = new Rational(5, 7)
-  val z = new Rational(3, 2)
+  val x = new Rational(6, 1)
+  val y = new Rational(3, 1)
+  val z = new Rational(2, 1)
 
-  val t = new Rational(5) // 5 / 1
-
-  x.sub(y).sub(z)
-  y.add(y)
-  x < (y)
-  z max (y)
+  x + y // 9 / 1
+  x + (y neg) // 3 / 1
+  x * y // 18 / 1
+  x / z // 3 / 1
 
   class Rational(x: Int, y: Int) {
     // this is a predifined function that takes
@@ -27,52 +25,53 @@ object week2 {
       if (b == 0) a
       else gcd(b, a % b)
     }
-    
-    val numer = x / gcd(x, y)
-    val denom = y / gcd(x, y)
 
-    def add(other: Rational) = {
+    val numer = x
+    val denom = y
+
+    def + (that: Rational) = {
       new Rational(
-        numer * other.denom + denom * other.numer,
-        denom * other.denom
+        numer * that.denom + denom * that.numer,
+        denom * that.denom
       )
     }
 
-    def sub(other: Rational) = {
-      new Rational(
-        numer * other.denom - denom * other.numer,
-        denom * other.denom
-      )
+    def - (other: Rational) = {
+      this + (other neg)
     }
 
-    def mult(other: Rational) = {
+    def * (other: Rational) = {
       new Rational(
         numer * other.numer,
         denom * other.denom
       )
     }
 
-    def div(other: Rational) = {
+    def / (that: Rational) = {
       new Rational(
-        numer * other.denom,
-        denom * other.numer
+        numer * that.denom,
+        denom * that.numer
       )
     }
 
-    def < (than: Rational) = {
-      numer * than.denom < than.numer * denom
+    def < (that: Rational) = {
+      numer * that.denom < that.numer * denom
     }
 
     def max(that: Rational) = {
       if (this < (that)) that else this
     }
 
-    def equals(other: Rational) = {
-      numer * other.denom == denom * other.numer
+    def equals(that: Rational) = {
+      numer * that.denom == denom * that.numer
+    }
+
+    def neg = {
+      new Rational(-numer, denom)
     }
 
     override def toString() = {
-      numer + " / " + denom
+      numer / gcd(numer, denom) + " / " + denom / gcd(numer, denom)
     }
   }
 }
