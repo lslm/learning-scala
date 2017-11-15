@@ -36,8 +36,8 @@ object week2 {
       )
     }
 
-    def - (other: Rational) = {
-      this + (other neg)
+    def - (that: Rational) = {
+      this + -that
     }
 
     def * (other: Rational) = {
@@ -66,7 +66,8 @@ object week2 {
       numer * that.denom == denom * that.numer
     }
 
-    def neg = {
+    // for prefixes
+    def unary_- = {
       new Rational(-numer, denom)
     }
 
