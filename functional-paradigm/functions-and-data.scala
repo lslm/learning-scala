@@ -9,8 +9,8 @@ object week2 {
 
   x.sub(y).sub(z)
   y.add(y)
-  x.less(y)
-  z.max(y)
+  x < (y)
+  z max (y)
 
   class Rational(x: Int, y: Int) {
     // this is a predifined function that takes
@@ -59,12 +59,12 @@ object week2 {
       )
     }
 
-    def less(than: Rational) = {
+    def < (than: Rational) = {
       numer * than.denom < than.numer * denom
     }
 
     def max(that: Rational) = {
-      if (this.less(that)) that else this
+      if (this < (that)) that else this
     }
 
     def equals(other: Rational) = {
