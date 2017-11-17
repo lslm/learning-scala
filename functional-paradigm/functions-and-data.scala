@@ -16,7 +16,7 @@ object week2 {
     require(y != 0, "Denominator must be nonzero")
 
     // secondary constructor
-    // it created a new rational with 1
+    // it creates a new rational with 1
     // as default denominator
     def this(x: Int) = this(x, 1)
 
