@@ -3,7 +3,7 @@
 */
 
 // "for-loop"
-def printName(name: String, times: Int) {
+def printNameNTimes(name: String, times: Int) {
   def loop(n: Int): Unit = {
     if(n > times) return
     else {
@@ -15,7 +15,7 @@ def printName(name: String, times: Int) {
   loop(1)
 }
 
-printName("Hello world", 10) // prints 'hello world' 10 times
+printNameNTimes("Hello world", 10) // prints 'hello world' 10 times
 
 /*
  sum function
@@ -31,3 +31,5 @@ def sum(n: Int): Int => Int = {
 }
 
 sum(5) (3) // sums 5 and 3, returning 8
+
+def 
