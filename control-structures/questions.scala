@@ -1,20 +1,16 @@
 // Some questions
 
 // 1: Check for Single Even
-// Write a function that takes in an integer and returns a Boolean indication whether or not it is even.
+// Write a function that takes an integer as argument and returns a Boolean indicating
+// whether or not it is even.
 // See if you can write this in one line
 
-def isEven(num: Int): Boolean = {
-  if(num%2 == 0) {
-    return true
-  }
-  return false
-}
-isEven(2)
-isEven(3)
+def isEven(num: Int): Boolean = if (num%2 == 0) true else false
+isEven(2) // true
+isEven(3) // false
 
-// Check for evend in a list
-//Write a function that returns true id there is an even number inside of a list,
+// Check for evens in a list
+// Write a function that returns true if there is an even number inside of a list,
 // otherwise, return false
 
 def containsEvenNumber(list: List[Int]): Boolean = {
@@ -71,7 +67,7 @@ def canYouBalance(list: List[Int]): Boolean = {
 canYouBalance(List(1,5,3,3))
 canYouBalance(List(7,3,4))
 
-// Check if a given word is Palimdrome
+// Check if a given word is a palindrome
 def isPalindrome(word: String): Boolean = {
   val reversedWord = word.reverse
   if (word.equalsIgnoreCase(reversedWord)) {
