@@ -31,5 +31,3 @@ def sum(n: Int): Int => Int = {
 }
 
 sum(5) (3) // sums 5 and 3, returning 8
-
-def 
